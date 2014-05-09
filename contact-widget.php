@@ -8,16 +8,21 @@ Author:       BC DevCom
 Author URI:   http://www.bellevuecollege.edu/
 */
 
-
-
-
-
-class mayflower_contact_plugin extends WP_Widget {
-
-// constructor
-    function mayflower_contact_plugin() {
-        parent::WP_Widget(false, $name = __('Contacts', 'wp_widget_plugin') );
-    }
+class Bc_Contact_Widget extends WP_Widget {
+    
+//	Construct Widget	//
+function __construct() {
+	parent::__construct(
+		// Base ID of your widget
+		'bc_contact_widget',
+ 
+		// Widget name will appear in UI
+		__('Office Contact', 'wp_widget_plugin'),
+ 
+		// Widget description
+		array( 'description' => __( 'Show your Bellevue College contact information!', 'wp_widget_plugin' ), )
+	);
+}
 
 // widget form creation
     function form($instance) {
@@ -124,9 +129,9 @@ class mayflower_contact_plugin extends WP_Widget {
 
         <?php
         echo $after_widget;
-    }} // mayflower_contact_plugin Class
+    }} // bc_contact_widget Class
 
 // register widget
-add_action( 'widgets_init', create_function( '', 'register_widget( "mayflower_contact_plugin" );' ) );
+add_action( 'widgets_init', create_function( '', 'register_widget( "bc_contact_widget" );' ) );
 
 ?>
