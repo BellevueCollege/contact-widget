@@ -26,14 +26,14 @@ class mayflower_contact_plugin extends WP_Widget {
         if( $instance) {
             $contact_widget_title = isset($instance['contact_widget_title']) ? esc_attr($instance['contact_widget_title']) : "";
             $contact_phone = isset($instance['contact_phone']) ? esc_attr($instance['contact_phone']) : "";
-            $Email_title = isset($instance['Email_title']) ? esc_attr($instance['Email_title']):"";
+            $contact_email = isset($instance['contact_email']) ? esc_attr($instance['contact_email']):"";
             $website_manager_name = isset($instance['website_manager_name']) ? esc_attr($instance['website_manager_name']) : "";
             $website_manager_email = isset($instance['website_manager_email']) ? esc_attr($instance['website_manager_email']) : "";
 
         } else {
             $contact_widget_title = 'Our contact';
             $contact_phone = '';
-            $Email_title = 'Hours:';
+            $contact_email = 'Hours:';
             $website_manager_name = '';
             $website_manager_email = '';
 
@@ -52,8 +52,8 @@ class mayflower_contact_plugin extends WP_Widget {
         </p>
 
         <p>
-            <label for="<?php echo $this->get_field_id('Email_title'); ?>"><?php _e('Email', 'wp_widget_plugin'); ?></label>
-            <input id="<?php echo $this->get_field_id('Email_title'); ?>" class="widefat" name="<?php echo $this->get_field_name('Email_title'); ?>" type="text" value="<?php echo $Email_title; ?>" />
+            <label for="<?php echo $this->get_field_id('contact_email'); ?>"><?php _e('Email', 'wp_widget_plugin'); ?></label>
+            <input id="<?php echo $this->get_field_id('contact_email'); ?>" class="widefat" name="<?php echo $this->get_field_name('contact_email'); ?>" type="text" value="<?php echo $contact_email; ?>" />
         </p>
 
         <p>
@@ -77,7 +77,7 @@ class mayflower_contact_plugin extends WP_Widget {
         // Fields
         $instance['contact_widget_title'] = strip_tags($new_instance['contact_widget_title']);
         $instance['contact_phone'] = strip_tags($new_instance['contact_phone']);
-        $instance['Email_title'] = strip_tags($new_instance['Email_title']);
+        $instance['contact_email'] = strip_tags($new_instance['contact_email']);
         $instance['website_manager_name'] = strip_tags($new_instance['website_manager_name']);
         $instance['website_manager_email'] = strip_tags($new_instance['website_manager_email']);
         return $instance;
@@ -88,7 +88,7 @@ class mayflower_contact_plugin extends WP_Widget {
         // these are the widget options
         $contact_widget_title = apply_filters('widget_title', $instance['contact_widget_title']);
         $contact_phone = $instance['contact_phone'];
-        $Email_title = apply_filters('widget_title', $instance['Email_title']);
+        $contact_email = apply_filters('widget_title', $instance['contact_email']);
         $website_manager_name = $instance['website_manager_name'];
         $website_manager_email = $instance['website_manager_email'];
         echo $before_widget;
@@ -110,8 +110,8 @@ class mayflower_contact_plugin extends WP_Widget {
             ?>
                 <?php
                 // Check if hours text is set
-                if( $Email_title ) {
-                    echo "<p>Email ".$Email_title.' </p>';
+                if( $contact_email ) {
+                    echo "<p>Email ".$contact_email.' </p>';
                 }
 
                 // Check if hours text is set
