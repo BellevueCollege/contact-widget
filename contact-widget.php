@@ -36,9 +36,9 @@ function __construct() {
             $website_manager_email = isset($instance['website_manager_email']) ? esc_attr($instance['website_manager_email']) : "";
 
         } else {
-            $contact_widget_title = 'Our contact';
+            $contact_widget_title = 'Contact Us';
             $contact_phone = '';
-            $contact_email = 'Hours:';
+            $contact_email = '';
             $website_manager_name = '';
             $website_manager_email = '';
 
@@ -52,12 +52,12 @@ function __construct() {
 
 
         <p>
-            <label for="<?php echo $this->get_field_id('contact_phone'); ?>"><?php _e('Office contact Phone:', 'wp_widget_plugin'); ?></label>
+            <label for="<?php echo $this->get_field_id('contact_phone'); ?>"><?php _e('Office Phone #: ', 'wp_widget_plugin'); ?></label>
             <input id="<?php echo $this->get_field_id('contact_phone'); ?>" class="widefat" name="<?php echo $this->get_field_name('contact_phone'); ?>" type="text" value="<?php echo $contact_phone; ?>" />
         </p>
 
         <p>
-            <label for="<?php echo $this->get_field_id('contact_email'); ?>"><?php _e('Email', 'wp_widget_plugin'); ?></label>
+            <label for="<?php echo $this->get_field_id('contact_email'); ?>"><?php _e('Office Email: ', 'wp_widget_plugin'); ?></label>
             <input id="<?php echo $this->get_field_id('contact_email'); ?>" class="widefat" name="<?php echo $this->get_field_name('contact_email'); ?>" type="text" value="<?php echo $contact_email; ?>" />
         </p>
 
@@ -106,22 +106,25 @@ function __construct() {
         }
 
         ?>
-        <div style="margin: 0 2em">
+        <div style="margin: .5em 2em">
+        	<p>
             <?php
             // Check if contact text is set
             if( $contact_phone ) {
-                echo '<p>'."Phone ".$contact_phone.'</p>';
+                echo "Phone: ".$contact_phone."<br />";
             }
-            ?>
-                <?php
+
                 // Check if hours text is set
                 if( $contact_email ) {
-                    echo "<p>Email ".$contact_email.' </p>';
+                    echo "Email: <a href='mailto:".$contact_email."'>".$contact_email. " </a>";
                 }
+                ?>
+                </p>
+                <?php
 
                 // Check if hours text is set
                 if( $website_manager_name && $website_manager_email ) {
-                    echo "<p> Website Managed By <a href='mailto:".$website_manager_email."'>".$website_manager_name. " </a> </p>";
+                    echo "<small>Website Managed By: <a href='mailto:".$website_manager_email."'>".$website_manager_name. " </a></small>";
                 }
                 ?>
 
