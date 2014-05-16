@@ -1,9 +1,9 @@
 contact-widget
 ==============
-Contributors: Tripti Sharma, Taija Tevia-Clark
+Contributors: Bellevue College
 Tags: Office Contact, Contact
 Tested for: 3.9
-Stable tag: 1.0.0
+Stable tag: 1
 License:
 License URI:
 
@@ -25,5 +25,5 @@ Website Manager Email
 
 
 == Changelog ==
-= 1.0 =
+= v1 =
 * Initial version
