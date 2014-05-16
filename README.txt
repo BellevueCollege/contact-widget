@@ -1,0 +1,29 @@
+contact-widget
+==============
+Contributors: Tripti Sharma, Taija Tevia-Clark
+Tags: Office Contact, Contact
+Tested for: 3.9
+Stable tag: 1.0.0
+License:
+License URI:
+
+
+== Description ==
+This plugin adds a widget under the Available Widgets list.
+User can add this to list contact information on there pages. Following are the fields that the widget offers:
+Contact Widget Title
+Office Phone #
+Office Email
+Website Manager Name
+Website Manager Email
+
+
+== Installation ==
+1. Download plugin files from https://github.com/BellevueCollege/contact-widget.
+2. Place the plugin folder in your `wp-content/plugins/` directory and activate it.
+3. You will see Widget Name Office Contact under the widget list.
+
+
+== Changelog ==
+= 1.0 =
+* Initial version
