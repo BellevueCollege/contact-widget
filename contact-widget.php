@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name:  Bellevue College Contact Widget
-Plugin URI:   http://www.bellevuecollege.edu/
+Plugin URI:   https://github.com/BellevueCollege/contact-widget
 Description:  Department/Unit contact Widget.
-Version:      0.1.0.1
-Author:       BC DevCom
+Version:      1
+Author:       Bellevue College DevCom
 Author URI:   http://www.bellevuecollege.edu/
 */
 
