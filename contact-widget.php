@@ -6,6 +6,7 @@ Description:  Department/Unit contact Widget.
 Version:      1
 Author:       Bellevue College DevCom
 Author URI:   http://www.bellevuecollege.edu/
+GitHub Plugin URI: bellevuecollege/netId-user-sync
 */
 
 class Bc_Contact_Widget extends WP_Widget {
