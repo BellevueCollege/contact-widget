@@ -3,7 +3,7 @@
 Plugin Name:  Bellevue College Contact Widget
 Plugin URI:   https://github.com/BellevueCollege/contact-widget
 Description:  Department/Unit contact Widget.
-Version:      1
+Version:      1.0.1
 Author:       Bellevue College DevCom
 Author URI:   http://www.bellevuecollege.edu/
 */
@@ -135,6 +135,6 @@ function __construct() {
     }} // bc_contact_widget Class
 
 // register widget
-add_action( 'widgets_init', create_function( '', 'register_widget( "bc_contact_widget" );' ) );
-
-?>
+add_action( 'widgets_init', function(){
+    register_widget( 'bc_contact_widget' );
+} );

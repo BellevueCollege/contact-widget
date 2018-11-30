@@ -27,3 +27,6 @@ Website Manager Email
 == Changelog ==
 = v1 =
 * Initial version
+
+= v1.0.1 =
+* PHP 7.2 Support
