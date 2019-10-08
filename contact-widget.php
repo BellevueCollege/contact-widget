@@ -3,7 +3,7 @@
 Plugin Name:  Bellevue College Contact Widget
 Plugin URI:   https://github.com/BellevueCollege/contact-widget
 Description:  Department/Unit contact Widget.
-Version:      1.0.1
+Version:      1.1.0-dev1
 Author:       Bellevue College DevCom
 Author URI:   http://www.bellevuecollege.edu/
 GitHub Plugin URI: bellevuecollege/netId-user-sync
@@ -106,7 +106,7 @@ function widget( $args, $instance ) {
 		//echo  "<h3>".$contact_widget_title."</h3>" ;
 		echo $before_title . $contact_widget_title . $after_title;
 	} ?>
-	<div style="margin: .5em 2em">
+	<div style="margin: .5em 1em">
 		<p>
 			<?php
 				// Check if contact text is set
