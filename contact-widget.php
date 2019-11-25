@@ -3,7 +3,7 @@
 Plugin Name:  Bellevue College Contact Widget
 Plugin URI:   https://github.com/BellevueCollege/contact-widget
 Description:  Department/Unit contact Widget.
-Version:      1.1.0-dev1
+Version:      1.1.0-dev2
 Author:       Bellevue College DevCom
 Author URI:   http://www.bellevuecollege.edu/
 GitHub Plugin URI: bellevuecollege/netId-user-sync
@@ -123,7 +123,7 @@ function widget( $args, $instance ) {
 		<?php
 			// Check if hours text is set
 			if ( $website_manager_name && $website_manager_email ) {
-				echo "<small>Website Managed By: <a href='mailto:$website_manager_email'>$website_manager_name</a></small>";
+				echo "<p><small>Website Managed By: <a href='mailto:$website_manager_email'>$website_manager_name</a></small></p>";
 			}
 		?>
 
