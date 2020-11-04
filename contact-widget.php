@@ -3,7 +3,7 @@
 Plugin Name:  Bellevue College Contact Widget
 Plugin URI:   https://github.com/BellevueCollege/contact-widget
 Description:  Department/Unit contact Widget.
-Version:      1.1.0-dev2
+Version:      1.1
 Author:       Bellevue College DevCom
 Author URI:   http://www.bellevuecollege.edu/
 GitHub Plugin URI: bellevuecollege/netId-user-sync
