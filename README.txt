@@ -30,3 +30,6 @@ Website Manager Email
 
 = v1.0.1 =
 * PHP 7.2 Support
+
+= v1.1 =
+* Mayflower G4 Support
